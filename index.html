@@ -1,0 +1,91 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/css.css" />
+	<script src="script.js" ></script>
+	<meta charset="utf-8" />
+
+
+</head>
+<body bgcolor="#E6E6FA">
+
+		<header>
+			<div id="header">
+				<h1><b>צומות ביהדות</b></h1>
+		</div>
+		</header>
+		<div id = "clickRef">
+			<table id = "table">
+				<tr>
+					<td> <a href="#/kipur"  id = "kipurRef">יום הכיפורים</a> </td>
+					<td> <a href="#/av"  id = "tishaRef">תשעה באב</a> </td>
+					<td> <a href="#/gad" id = "gRef">צום גדליה</a> </td>
+					<td> <a href="#/aser" id = "aserRef">עשרה בטבת</a></td>
+				</tr>
+			</table>
+		<div id = "info">
+			<script type="text/ng-template" id="pages/kipur.html">
+				<div id = "title" >
+					<h1>{{title}}</h1>
+				</div>
+				<div id ="data">
+					<p><a id = "href" href="{{message_header}}"> קבל חוכמה </a></p>
+				</div>
+				<div id =" picData">
+					<img src = "{{imgae}}" height="400" width="600">
+				</div>
+			</script>
+			<script type="text/ng-template" id="pages/av.html">
+				<div id = "title" >
+					<h1>{{title}}</h1>
+				</div>
+					<div id ="data">
+						<p><a id = "href" href="{{message_header}}"> קבל חוכמה </a></p>
+					</div >
+
+				<div id =" picData">
+					<img src = "{{imgae}}" height="400" width="600">
+				</div>
+			</script>
+
+			<script type="text/ng-template" id="pages/gad.html">
+				<div id = "title" >
+					<h1>{{title}}</h1>
+				</div>
+					<div id = "data">
+						<p><a id = "href" href="{{message_header}}"> קבל חוכמה </a></p>
+					</div>
+
+				<div id =" picData">
+					<img src = "{{imgae}}" height="400" width="750">
+				</div>
+			</script>
+			<script type="text/ng-template" id="pages/aser.html">
+				<div id = "title" >
+					<h1>{{title}}</h1>
+				</div>
+				<div id = "data">
+					<p><a id = "href" href="{{message_header}}"> קבל חוכמה </a></p>
+				</div>
+				<div id =" picData">
+					<img src = "{{imgae}}" height="400" width="600">
+				</div>
+			</script>
+
+
+			<!--this is the injection itself!-->
+<div style="background-color: dodgerblue;" >
+			<div ng-view></div>
+
+			</div>
+			<div id = "try">
+
+			</div>
+			</div>
+		</div>
+
+
+</body>
+</html>
